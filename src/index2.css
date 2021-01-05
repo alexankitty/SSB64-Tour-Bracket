@@ -1,0 +1,7 @@
+body{
+    background-image: url('../assets/circle.png');
+    background-size: 300px 300px; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  

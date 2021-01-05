@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+      //This part of this function control these players on the bracket whether they win or lose.
+      $(document).ready(function(){       
+           $("button").bind('click', player);
+  function player(e) {
+    e.preventDefault();
+    $("button").unbind();
+    $('#circle').animate({left: '75px'}, 3000, function() {
+ 
+      $("button").bind('click', player);
+  function player(f) {
+    f.preventDefault();
+    $("button").unbind();
+    $('#circle').animate({top: '+=65px'}, 3000, function() {
+      
+      $("button").bind('click', player);
+  function player(t) {
+    t.preventDefault();
+    $("button").unbind();
+    $('#circle').animate({left: '+=132px'}, 3000, function() {
+      
+      $("button").bind('click', player);
+  function player(t) {
+    t.preventDefault();
+    $("button").unbind();
+    $('#circle').animate({top: '+=101px',}, 3000, function() {
+      $('#circle').animate({left: '+=64px',}, 3000, function() {
+      
+      
+    }); 
+      
+    }); 
+  }
+}); 
+
+}}); 
+
+  }
+})   
+
+}});      
+    </script>
+    <meta charset="UTF-8">
+    <title>SSB64 Tournament Bracket</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <Button>Start Animation</Button>
+    <p></p>
+    <script>
+      require('renderer.js');
+      require('RichPresence.js');
+        </script>
+    <img id ="circle" src= "../assets/circle.png" alt="" width="35" height="35"
+    style="position: relative; left: -50px; top: -15px;">
+</body>
+</html>

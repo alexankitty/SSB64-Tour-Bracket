@@ -1,0 +1,12 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Kabel Bold", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+  background-color: green;
+  background-image: url('../assets/bracket.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 800px 500px; 
+  background-position: 0px, 190px;  
+}
