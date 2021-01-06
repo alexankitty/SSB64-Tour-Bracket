@@ -10,3 +10,8 @@ body {
   background-size: 800px 500px; 
   background-position: 0px, 190px;  
 }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(Kabel_Bold.ttf);
+}

@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <div class="parent">
+      <text>Current player:</text>
+      <span id="mySpan">This vs. UnKnown_Krevzz</span>
+  </div>
+
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script>
+      
       //This part of this function control these players on the bracket whether they win or lose.
-      $(document).ready(function(){       
-           $("button").bind('click', player);
+      $(document).ready(function(){   
+
+        $("button").on('click', function(){
+    $('#mySpan').animate({
+        'opacity' : 0
+    }, 400, function(){
+        $(this).html('First round').animate({'opacity': 1}, 400);});    
+    
+    });    
+
+      $("button").bind('click', player);
   function player(e) {
     e.preventDefault();
     $("button").unbind();
     $('#circle').animate({left: '75px'}, 3000, function() {
- 
+      $("button").on('click', function(){
+    $('#mySpan').animate({
+        'opacity' : 0
+    }, 400, function(){
+        $(this).html('Second round').animate({'opacity': 1}, 400);});
+    });  
+    
       $("button").bind('click', player);
   function player(f) {
     f.preventDefault();
     $("button").unbind();
     $('#circle').animate({top: '+=65px'}, 3000, function() {
-      
+      $("button").on('click', function(){
+    $('#mySpan').animate({
+        'opacity' : 0
+    }, 400, function(){
+        $(this).html('Semi-F').animate({'opacity': 1}, 400);});
+    });
+       
       $("button").bind('click', player);
   function player(t) {
     t.preventDefault();
     $("button").unbind();
     $('#circle').animate({left: '+=132px'}, 3000, function() {
+      $("button").on('click', function(){
+    $('#mySpan').animate({
+        'opacity' : 0
+    }, 400, function(){
+        $(this).html("Finals").animate({'opacity': 1}, 400);});
+    });
       
       $("button").bind('click', player);
-  function player(t) {
-    t.preventDefault();
+  function player(u) {
+    u.preventDefault();
     $("button").unbind();
-    $('#circle').animate({top: '+=101px',}, 3000, function() {
-      $('#circle').animate({left: '+=64px',}, 3000, function() {
+    $('#circle').animate({top: '+=106px',}, 3000, function() {
+      $("button").on('click', function(){
+        $('#mySpan').animate({  'opacity' : 0
+    }, 400, function(){
+        $(this).html('Winner!').animate({'opacity': 1}, 400);});
+    });
+    $("button").bind('click', player);
+  function player(r) {
+    r.preventDefault();
+    $("button").unbind();
+    $('#circle').animate({left: '+=67px',}, 3000, function() {
+      $("button").on('click', function(){
+        $('#mySpan').animate({  'opacity' : 0
+    }, 400, function(){
+        $(this).html('Winner!').animate({'opacity': 1}, 400);});
+    });
+    
+  
       
+      
+          
       
     }); 
-      
-    }); 
-  }
-}); 
+    
+  
+  }});
+}}); 
 
 }}); 
 
@@ -56,6 +107,7 @@
       require('RichPresence.js');
         </script>
     <img id ="circle" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -50px; top: -15px;">
+    style="position: relative; left: -50px; top: -35px;">
+    
 </body>
 </html>

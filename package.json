@@ -44,6 +44,7 @@
   "dependencies": {
     "animejs": "^3.2.1",
     "discord-rpc": "^3.1.4",
+    "electron-app": "^1.0.0",
     "electron-color-picker": "^0.2.0",
     "electron-squirrel-startup": "^1.0.0",
     "jquery": "^3.5.1",
