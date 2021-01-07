@@ -3,6 +3,28 @@ const path = require('path');
 const fs = require('fs');
 const RPC = require('discord-rpc');
 
+//ToDO: 13 more to do.
+//finish 7 more icons on the bracket and script them.
+//Photoshop for names and scores.
+//photoshop for custom icons.
+//Change font for the scores, names, etc.
+//Implement hotkeys help such as navigating the icons.
+//We're going to script the names and scores. When clicking on "Change names" in options, this will make text editor window pop-up and allow users to edit names for each bracket.
+//Error message when tournament set and names are empty. When a user attempts to move the player icon without them, this will bring up a error. They need to setup a tournament set and names first before proceeding.
+//Fix the rich presence. This will update rounds and players on the bracket on your discord profile playing status display.
+//Add a color picker for the background color.
+//statistics for names and scores with time and date. (print those stats on the log when tournament is complete. Save and open to view the log on notepad if necessary.)
+//Animation for stars whoever is in 1st place. (Will implement that later.)
+//p2p private online sharing with a user to control the bracket (I will hold on into that.) 
+
+
+//-----Regarding of SSBBRAK file, might worry about this later.---//
+
+//make a *.SSBRAK file. In case we lose progress such as PC crash, this app crashes or accidentally closed it while hosting a tournament.
+//first, save the file. After saving, this will save the data including icons, scores and names where we left off on the bracket without starting over the entire tournament.
+//If one of the issues occurs as I previously mentioned about losing some progress, it will start all over in the bracket when re-opening the app. We assure that bracket file is opened,
+//this file will automatically puts it back where it belongs and then resume a tournament without stress.
+
 var mainWindow
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
