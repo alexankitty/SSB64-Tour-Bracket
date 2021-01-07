@@ -3,10 +3,6 @@ const path = require('path');
 const fs = require('fs');
 const RPC = require('discord-rpc');
 
-//<Button>Start Animation</Button>
-
-//$('#circle').animate({left: '+=64px',}, 2500, function() {
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
 var mainWindow
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();

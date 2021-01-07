@@ -7,31 +7,80 @@
   </div>
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script>
+
+      //unused function.
+      //$(document).ready(function(){   
+//  $("body").keydown(function(i) {
+  //  if(i.which == 49) {
+    //  $("#circle").animate({ left: '75px'}, 3000, function(){
+     //   $('#mySpan').animate({
+  //'opacity' : 0
+//}, 400, function(){
+  //      $(this).html('First round').animate({'opacity': 1}, 400);}); 
+   //   })};
+  //  });
+  //});
+
       
       //This part of this function control these players on the bracket whether they win or lose.
+      
+      //First Round.
       $(document).ready(function(){   
+        $("body").keypress(function(i) {
+          if(i.which == 49) { $('body').unbind('keypress');
+            $("#circle").animate({ left: '75px'}, 3000, function(){
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('First round').animate({'opacity': 1}, 400);}); 
 
-        $("button").on('click', function(){
-    $('#mySpan').animate({
-        'opacity' : 0
-    }, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);});    
-    
-    });    
-
-      $("button").bind('click', player);
-  function player(e) {
-    e.preventDefault();
-    $("button").unbind();
-    $('#circle').animate({left: '75px'}, 3000, function() {
-      $("button").on('click', function(){
-    $('#mySpan').animate({
-        'opacity' : 0
-    }, 400, function(){
+        //Second Round.
+        $("body").keypress(function(i) {
+          if(i.which == 49) { $('body').unbind('keypress');
+            $("#circle").animate({ top: '+=66px'}, 3000, function(){
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
         $(this).html('Second round').animate({'opacity': 1}, 400);});
-    });  
-    
+
+        //Third Round.
+        $("body").keypress(function(i) {
+          if(i.which == 49) { $('body').unbind('keypress');
+            $("#circle").animate({ left: '+=134px'}, 3000, function(){
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('Semi-Finals').animate({'opacity': 1}, 400);}); 
+
+        //Final Round.
+            $("body").keypress(function(i) {
+          if(i.which == 49) { $('body').unbind('keypress');
+            $("#circle").animate({ top: '+=106px'}, 3000, function(){
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('Finals').animate({'opacity': 1}, 400);});
+        
+        //Tournament over.
+        $("body").keypress(function(i) {
+          if(i.which == 49) { $('body').unbind('keypress');
+            $("#circle").animate({ left: '+=67px'}, 3000, function(){
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('UnKnown_Krevzz, you are a Winner!').animate({'opacity': 1}, 400);});
+              });
+            }})
+            });
+          }}); 
+          });
+      }});
+     });      
+
+          
+        }});
+      });      
+
+    }});
+  });
+        
+            
+
+          
+        //unused click function
+          
       $("button").bind('click', player);
   function player(f) {
     f.preventDefault();
@@ -43,7 +92,7 @@
     }, 400, function(){
         $(this).html('Semi-F').animate({'opacity': 1}, 400);});
     });
-       
+       //unused click function
       $("button").bind('click', player);
   function player(t) {
     t.preventDefault();
@@ -55,7 +104,7 @@
     }, 400, function(){
         $(this).html("Finals").animate({'opacity': 1}, 400);});
     });
-      
+      //unused click function
       $("button").bind('click', player);
   function player(u) {
     u.preventDefault();
@@ -66,6 +115,7 @@
     }, 400, function(){
         $(this).html('Winner!').animate({'opacity': 1}, 400);});
     });
+    //unused click function
     $("button").bind('click', player);
   function player(r) {
     r.preventDefault();
@@ -79,7 +129,7 @@
     
   
       
-      
+
           
       
     }); 
@@ -91,23 +141,23 @@
 }}); 
 
   }
-})   
+   
 
-}});      
+     
     </script>
     <meta charset="UTF-8">
     <title>SSB64 Tournament Bracket</title>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <Button>Start Animation</Button>
+    
     <p></p>
     <script>
       require('renderer.js');
       require('RichPresence.js');
         </script>
     <img id ="circle" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -50px; top: -35px;">
+    style="position: relative; left: -50px; top: -15px;">
     
 </body>
 </html>
