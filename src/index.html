@@ -9,6 +9,7 @@
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../src/RichPresence.js"></script>
     <script>
 
       //unused function.
@@ -34,22 +35,44 @@
             $("#circle").animate({ left: '75px'}, 3000, function(){
 
               $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);}); 
+        $(this).html('First round').animate({'opacity': 1}, 400);});
+         
 
-        //Second Round.
-        $("body").keypress(function(i) {
-          if(i.which == 49) { $('body').unbind('keypress');
-            $("#circle").animate({ top: '+=66px'}, 3000, function(){
+        $("body2").keypress(function() {
+          if(e.which == 50) { $('body').unbind('keypress');
+            $("#icon2").animate({ left: '40px'}, 3000, function(){
 
               $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('Second round').animate({'opacity': 1}, 400);});
+        $(this).html('First round').animate({'opacity': 1}, 400);}); 
 
+        $("body3").keypress(function(i) {
+          if(i.which == 51) { $('body').unbind('keypress');
+            $("#icon3").animate({ left: '95px'}, 3000, function(){
+
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('First round').animate({'opacity': 1}, 400);}); 
+
+        $("body4").keypress(function(i) {
+          if(i.which == 52) { $('body').unbind('keypress');
+            $("#icon4").animate({ left: '60px'}, 3000, function(){
+
+              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+        $(this).html('First round').animate({'opacity': 1}, 400);});
+        
+              });
+
+            }})});
+            }})})}});
+        
+            //Second Round.
+          
+           
         //Third Round.
-        $("body").keypress(function(i) {
+        $("body3").keypress(function(i) {
           if(i.which == 49) { $('body').unbind('keypress');
             $("#circle").animate({ left: '+=134px'}, 3000, function(){
 
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+              $('#mySpan2').animate({ 'opacity' : 0}, 400, function(){
         $(this).html('Semi-Finals').animate({'opacity': 1}, 400);}); 
 
         //Final Round.
@@ -79,8 +102,10 @@
         }});
       });      
 
-    }});
-  });
+    
+    
+        
+              
                  
         //unused click function
           
