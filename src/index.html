@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="index2.css"/>
     <div class="parent">
       <text>Current players:</text>
       <span id="mySpan"></span>
       <span id="names">This vs. UnKnown_Krevzz</span>
+      
   </div>
+    <script>
+    require('renderer.js');
+    require('RichPresence.js');
+    </script>
+    
 
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
@@ -29,146 +36,194 @@
       //This part of this function control these players on the bracket whether they win or lose.
       
       //First Round.
-      $(document).ready(function(){   
-        $("body").keypress(function(i) {
-          if(i.which == 49) { $('body').unbind('keypress');
-            $("#circle").animate({ left: '75px'}, 3000, function(){
 
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);});
+
+    //   $(document).ready(function(){  
+        
+    //     $("body").keypress(function(i) {
+    //     switch(i.key) {
+    //       case 1:
+    //         $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000);
+    //         $('#mySpan').animate({ 'opacity' : 0}, 400);
+    //         $(this).html('First round').animate({'opacity': 1}, 400);
+    //         window.alert("triggered")
+    //       break;
+
+    //       case 50:
+    //         $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000);
+    //         $('#mySpan').animate({ 'opacity' : 0}, 400);
+    //         $(this).html('First round').animate({'opacity': 1}, 400);
+    //         window.alert("triggered")
+    //       break;
+
+    //       case 51:
+    //       $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000);
+    //         $('#mySpan').animate({ 'opacity' : 0}, 400);
+    //         $(this).html('First round').animate({'opacity': 1}, 400);
+    //         window.alert("triggered")
+    //       case 52:
+
+    //       $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000);
+    //         $('#mySpan').animate({ 'opacity' : 0}, 400);
+    //         $(this).html('First round').animate({'opacity': 1}, 400);
+    //         window.alert("triggered")
+    //       break;
+
+    //       case 53:
+    //       $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000);
+    //         $('#mySpan').animate({ 'opacity' : 0}, 400);
+    //         $(this).html('First round').animate({'opacity': 1}, 400);
+    //         window.alert("triggered")
+    //       break;
+    //     }
+    //   }
+    // })
+        
+
+
+        
+    //     $(document).keypress(function(i) {
+    //       if(i.which == 49) { $(document).unbind('keypress');
+    //         $("#circle").animate({ left: '75px'}, 3000, function(){
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('First round').animate({'opacity': 1}, 400);});
          
+    //     $(document).keypress(function(i) {
+    //       if(i.which == 50) { $(document).unbind('keypress');
+    //       $("#circle").animate({ left: '75px'}, 3000, function(){
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('First round').animate({'opacity': 1}, 400);});
 
-        $("body2").keypress(function() {
-          if(e.which == 50) { $('body').unbind('keypress');
-            $("#icon2").animate({ left: '40px'}, 3000, function(){
 
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);}); 
+    //     $("body").keypress(function(i) {
+    //       if(i.which == 51) { $('body').unbind('keypress');
+    //         $("#icon3").animate({ left: '95px'}, 3000, function(){
 
-        $("body3").keypress(function(i) {
-          if(i.which == 51) { $('body').unbind('keypress');
-            $("#icon3").animate({ left: '95px'}, 3000, function(){
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('First round').animate({'opacity': 1}, 400);}); 
 
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);}); 
+    //     $("body").keypress(function(i) {
+    //       if(i.which == 52) { $('body').unbind('keypress');
+    //         $("#icon4").animate({ left: '60px'}, 3000, function(){
 
-        $("body4").keypress(function(i) {
-          if(i.which == 52) { $('body').unbind('keypress');
-            $("#icon4").animate({ left: '60px'}, 3000, function(){
-
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('First round').animate({'opacity': 1}, 400);});
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('First round').animate({'opacity': 1}, 400);});
         
-              });
+    //           });
 
-            }})});
-            }})})}});
+    //         }})});
+    //         }})})}});
         
-            //Second Round.
+    //         //Second Round.
           
            
-        //Third Round.
-        $("body3").keypress(function(i) {
-          if(i.which == 49) { $('body').unbind('keypress');
-            $("#circle").animate({ left: '+=134px'}, 3000, function(){
+    //     //Third Round.
+    //     $("body3").keypress(function(i) {
+    //       if(i.which == 49) { $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '+=134px'}, 3000, function(){
 
-              $('#mySpan2').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('Semi-Finals').animate({'opacity': 1}, 400);}); 
+    //           $('#mySpan2').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('Semi-Finals').animate({'opacity': 1}, 400);}); 
 
-        //Final Round.
-            $("body").keypress(function(i) {
-          if(i.which == 49) { $('body').unbind('keypress');
-            $("#circle").animate({ top: '+=106px'}, 3000, function(){
+    //     //Final Round.
+    //         $("body").keypress(function(i) {
+    //       if(i.which == 49) { $('body').unbind('keypress');
+    //         $("#circle").animate({ top: '+=106px'}, 3000, function(){
               
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('Finals').animate({'opacity': 1}, 400);});
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('Finals').animate({'opacity': 1}, 400);});
         
-        //Tournament over.
-        $("body").keypress(function(i) {
-          if(i.which == 49) { $('body').unbind('keypress');
-            $("#circle").animate({ left: '+=67px'}, 3000, function(){
+    //     //Tournament over.
+    //     $("body").keypress(function(i) {
+    //       if(i.which == 49) { $('body').unbind('keypress');
+    //         $("#circle").animate({ left: '+=67px'}, 3000, function(){
 
-              $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
-        $(this).html('UnKnown_Krevzz, you are a Winner!').animate({'opacity': 1}, 400);});
-              });
-            }})
-            });
-          }}); 
-          });
-      }});
-     });      
+    //           $('#mySpan').animate({ 'opacity' : 0}, 400, function(){
+    //     $(this).html('UnKnown_Krevzz, you are a Winner!').animate({'opacity': 1}, 400);});
+    //           });
+    //         }})
+    //         });
+    //       }}); 
+    //       });
+    //   }});
+    //  });      
 
           
-        }});
-      });      
+    //     }});
+    //   });      
 
     
     
         
               
                  
-        //unused click function
+//         //unused click function
           
-      $("button").bind('click', player);
-  function player(f) {
-    f.preventDefault();
-    $("button").unbind();
-    $('#circle').animate({top: '+=65px'}, 3000, function() {
-      $("button").on('click', function(){
-    $('#mySpan').animate({
-        'opacity' : 0
-    }, 400, function(){
-        $(this).html('Semi-F').animate({'opacity': 1}, 400);});
-    });
-       //unused click function
-      $("button").bind('click', player);
-  function player(t) {
-    t.preventDefault();
-    $("button").unbind();
-    $('#circle').animate({left: '+=132px'}, 3000, function() {
-      $("button").on('click', function(){
-    $('#mySpan').animate({
-        'opacity' : 0
-    }, 400, function(){
-        $(this).html("Finals").animate({'opacity': 1}, 400);});
-    });
-      //unused click function
-      $("button").bind('click', player);
-  function player(u) {
-    u.preventDefault();
-    $("button").unbind();
-    $('#circle').animate({top: '+=106px',}, 3000, function() {
-      $("button").on('click', function(){
-        $('#mySpan').animate({  'opacity' : 0
-    }, 400, function(){
-        $(this).html('Winner!').animate({'opacity': 1}, 400);});
-    });
-    //unused click function
-    $("button").bind('click', player);
-  function player(r) {
-    r.preventDefault();
-    $("button").unbind();
-    $('#circle').animate({left: '+=67px',}, 3000, function() {
-      $("button").on('click', function(){
-        $('#mySpan').animate({  'opacity' : 0
-    }, 400, function(){
-        $(this).html('Winner!').animate({'opacity': 1}, 400);});
-    });
+//       $("button").bind('click', player);
+//   function player(f) {
+//     f.preventDefault();
+//     $("button").unbind();
+//     $('#circle').animate({top: '+=65px'}, 3000, function() {
+//       $("button").on('click', function(){
+//     $('#mySpan').animate({
+//         'opacity' : 0
+//     }, 400, function(){
+//         $(this).html('Semi-F').animate({'opacity': 1}, 400);});
+//     });
+//        //unused click function
+//       $("button").bind('click', player);
+//   function player(t) {
+//     t.preventDefault();
+//     $("button").unbind();
+//     $('#circle').animate({left: '+=132px'}, 3000, function() {
+//       $("button").on('click', function(){
+//     $('#mySpan').animate({
+//         'opacity' : 0
+//     }, 400, function(){
+//         $(this).html("Finals").animate({'opacity': 1}, 400);});
+//     });
+//       //unused click function
+//       $("button").bind('click', player);
+//   function player(u) {
+//     u.preventDefault();
+//     $("button").unbind();
+//     $('#circle').animate({top: '+=106px',}, 3000, function() {
+//       $("button").on('click', function(){
+//         $('#mySpan').animate({  'opacity' : 0
+//     }, 400, function(){
+//         $(this).html('Winner!').animate({'opacity': 1}, 400);});
+//     });
+//     //unused click function
+//     $("button").bind('click', player);
+//   function player(r) {
+//     r.preventDefault();
+//     $("button").unbind();
+//     $('#circle').animate({left: '+=67px',}, 3000, function() {
+//       $("button").on('click', function(){
+//         $('#mySpan').animate({  'opacity' : 0
+//     }, 400, function(){
+//         $(this).html('Winner!').animate({'opacity': 1}, 400);});
+//     });
     
   
       
 
           
       
-    }); 
+//     }); 
     
   
-  }});
-}}); 
+//   }});
+// }}); 
 
-}}); 
+// }}); 
 
-  }
+//   }
    
 
      
@@ -180,21 +235,14 @@
   <body>
     
     <p></p>
-    <script>
-      require('renderer.js');
-      require('RichPresence.js');
-        </script>
-    <img id ="circle" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -50px; top: -15px;">
 
-    <img id ="icon2" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -90px; top: 115px;">
+    <img id ="circle" class="icon" src= "../assets/circle.png" alt="" width="35" height="35">
 
-    <img id ="icon3" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -130px; top: 260px;">
+    <img id ="icon2" class="icon" src= "../assets/circle.png" alt="" width="35" height="35">
 
-    <img id ="icon4" src= "../assets/circle.png" alt="" width="35" height="35"
-    style="position: relative; left: -170px; top: 390px;">
+    <img id ="icon3" class="icon" src= "../assets/circle.png" alt="" width="35" height="35">
+
+    <img id ="icon4" class="icon" src= "../assets/circle.png" alt="" width="35" height="35">
 
 
 
@@ -209,6 +257,7 @@
 
     <img id ="icon8" src= "../assets/circle.png" alt="" width="35" height="35"
     style="position: relative; left: 340px; top: 395px;">
-    
+    <script src="main.js"></script>
 </body>
 </html>
+

@@ -3,5 +3,30 @@ body{
     background-size: 300px 300px; 
     background-repeat: no-repeat;
     background-attachment: fixed;
+
   }
   
+.icon {
+  display: block;
+  position: absolute;
+}
+
+#circle{
+  left: 50px;
+  top: 50px;
+}
+
+#icon2{
+  left: 50px;
+  top: 180px;
+}
+
+#icon3{
+  left: 50px;
+  top: 325px;
+}
+
+#icon4{
+  left: 50px;
+  top: 455px;
+}
